@@ -1,0 +1,3625 @@
+{
+  "info": {
+    "_postman_id": "a10d81b0-6867-49d7-ab7b-b667a1dc9b76",
+    "name": "BancoppelRest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "10206045",
+    "_collection_link": "https://go.postman.co/collection/10206045-a10d81b0-6867-49d7-ab7b-b667a1dc9b76?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "APIS",
+      "item": [
+        {
+          "name": "IncioInstancia",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "manage",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"contextoTransaccional\":{\r\n        \"fechaTx\": \"01/02/2024 12:01:00\",\r\n        \"idTx\": \"idTx01\",\r\n        \"idInstanciaProceso\": \"\",\r\n        \"usuario\": \"modiouser\",\r\n        \"operacion\": \"IniciarInstancia\"\r\n    },\r\n    \"customID\": \"NORA107HTLCSA08\",\r\n    \"datosNegocio\": {\r\n        \"curp\": \"NORA107HTLCSA08\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://3.236.225.236:5555/rad/bpm.api:InicioInstancia/v1/processes",
+              "protocol": "http",
+              "host": [
+                "3",
+                "236",
+                "225",
+                "236"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "bpm.api:InicioInstancia",
+                "v1",
+                "processes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "searchTask",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API REST",
+      "item": [
+        {
+          "name": "searchTaskByParam",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customID\": \"3bcee366-ef6a-465e-a7d0-e81bcf6e16c7\",\r\n    \"taskID\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev-apigee.bancoppel.space/businessRule/processDiscovery/v1/searchTaskByParam",
+              "protocol": "https",
+              "host": [
+                "dev-apigee",
+                "bancoppel",
+                "space"
+              ],
+              "path": [
+                "businessRule",
+                "processDiscovery",
+                "v1",
+                "searchTaskByParam"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "startCustomerOnboarding",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"contextoTransaccional\": {\r\n        \"txId\": \"\",\r\n        \"txStartDate\": \"\",\r\n        \"stepId\": \"\",\r\n        \"processDefinitionName\": \"\",\r\n        \"processInstanceId\": \"\",\r\n        \"customProcessInstanceId\": \"\",\r\n        \"taskId\": \"\",\r\n        \"customTaskId\": \"\",\r\n        \"stepName\": \"\",\r\n        \"applicationUserId\": \"\",\r\n        \"executorUserId\": \"\",\r\n        \"stopInstance\": \"\",\r\n        \"completeTask\": \"\"\r\n    },\r\n    \"datosControl\": {\r\n        \"requestNumber\": \"\",\r\n        \"requestChannel\": \"\",\r\n        \"requestStatus\": \"\",\r\n        \"numberProduct\": \"\",\r\n        \"branchOffice\": \"\",\r\n        \"requestRenapoStatus\": null,\r\n        \"requestNssStatus\": null,\r\n        \"requestIneStatus\": null,\r\n        \"requestProcesarStatus\": null,\r\n        \"frontScreenName\": \"\",\r\n        \"processStageNum\": \"\",\r\n        \"processStageName\": \"\",\r\n        \"applicationProcessStatus\": \"\",\r\n        \"validaciones\": {\r\n            \"clienteAfore\": null,\r\n            \"validacionCurp\": null,\r\n            \"validacionRenapo\": \"\",\r\n            \"estadoSolicitud\": \"\",\r\n            \"fechaEnvioProcesar\": 0,\r\n            \"consultaIMSS\": null,\r\n            \"huellasAPcorrectas\": null,\r\n            \"consultaPROCESAR\": null,\r\n            \"huellasTrabajador\": true,\r\n            \"generacionSello\": \"\",\r\n            \"consultaHuellasQuemadas\": null,\r\n            \"expedienteEnrolamiento\": null,\r\n            \"emailValido\": null,\r\n            \"telefonoValido\": \"\",\r\n            \"revalidarHuellas\": null,\r\n            \"consultaPROCESAR2\": null,\r\n            \"llegoFolioPROCESAR\": null\r\n        }\r\n    },\r\n    \"dt_trabajador\": {\r\n        \"CURP\": \"NORA\",\r\n        \"numCelular\": \"\",\r\n        \"tipoCedulaIdentificacion\": \"FOTO_INE_FRENTE.png\",\r\n        \"first_name\": \"\",\r\n        \"middle_name\": \"\",\r\n        \"ptrnl_surnam\": \"\",\r\n        \"mtrnl_surnam\": \"\",\r\n        \"rfc\": \"\",\r\n        \"gender\": \"\",\r\n        \"NSS\": \"\",\r\n        \"email\": \"\",\r\n        \"Beneficiario\": []\r\n    },\r\n    \"dt_response\": {\r\n        \"code\": \"\",\r\n        \"msg\": \"\",\r\n        \"dateResponse\": \"\",\r\n        \"serviceResponse\": \"\",\r\n        \"processResponse\": \"\"\r\n    },\r\n    \"_env\": {}\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/AF_SRV_TraspasoAfore.api.provider:RES_TraspasoAforeAsistido/iniciaTraspasoAforeAsistido",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "AF_SRV_TraspasoAfore.api.provider:RES_TraspasoAforeAsistido",
+                "iniciaTraspasoAforeAsistido"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "completeTask",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    //\"customID\": \"VAC_202503191612_3\",\r\n    //\"processInstanceID\": \"bee14b02-f9c0-4d8d-b242-51157545851a\",\r\n    //\"customID\": \"wm:fb2984d0-f784-11ee-ac1b-000000000008\",\r\n    \"completeTask\": true,\r\n    \"taskID\": \"10074\",\r\n    //\"stopInstance\": true\r\n    \"GenericDocument\": {\r\n        \"dt_traspasoAfore\": {\r\n            \"contextoTransaccional\": {\r\n                \"applicationUserId\": \"\",\r\n                \"completeTask\": \"true\",\r\n                \"customProcessInstanceId\": \"\",\r\n                \"customTaskId\": \"\",\r\n                \"executorUserId\": \"\",\r\n                \"processDefinitionName\": \"AF_BPM_TraspasoAfore/FP_TraspasoAforeAsistido\",\r\n                \"processInstanceId\": \"cf69a530-4b94-477e-b4a5-f02fe4cb28f3\",\r\n                \"stepId\": \"S278\",\r\n                \"stepName\": \"PNT06\",\r\n                \"stopInstance\": \"false\",\r\n                \"taskId\": \"10074\",\r\n                \"txId\": \"\",\r\n                \"txStartDate\": \"20250902 174243\"\r\n            },\r\n            \"datosControl\": {\r\n                \"applicationProcessStatus\": \"\",\r\n                \"branchOffice\": \"\",\r\n                \"numberProduct\": \"\",\r\n                \"processStageName\": \"\",\r\n                \"processStageNum\": \"\",\r\n                \"requestChannel\": \"\",\r\n                \"requestIneStatus\": false,\r\n                \"requestNssStatus\": false,\r\n                \"requestNumber\": \"\",\r\n                \"requestProcesarStatus\": false,\r\n                \"requestRenapoStatus\": false,\r\n                \"requestStatus\": \"\",\r\n                \"validaciones\": {\r\n                    \"clienteAfore\": false,\r\n                    \"consultaHuellasQuemadas\": false,\r\n                    \"consultaIMSS\": false,\r\n                    \"consultaPROCESAR\": false,\r\n                    \"consultaPROCESAR2\": false,\r\n                    \"emailValido\": false,\r\n                    \"estadoSolicitud\": \"nueva\",\r\n                    \"expedienteEnrolamiento\": false,\r\n                    \"fechaEnvioProcesar\": 6,\r\n                    \"generacionSello\": false,\r\n                    \"huellasAPcorrectas\": false,\r\n                    \"huellasTrabajador\": true,\r\n                    \"llegoFolioPROCESAR\": false,\r\n                    \"revalidarHuellas\": false,\r\n                    \"telefonoValido\": \"\",\r\n                    \"validacionCurp\": true,\r\n                    \"validacionRenapo\": \"\"\r\n                }\r\n            },\r\n            \"dt_trabajador\": {\r\n                \"numCelular\": \"2411910005\",\r\n                \"NSS\": \"NORA1001447DS\"\r\n            }\r\n        }\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/SRV_Bancoppel.API.v1:services/completeTask",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "SRV_Bancoppel.API.v1:services",
+                "completeTask"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API REST RULES",
+      "item": [
+        {
+          "name": "RN01",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"lat\": 19.4004158,\r\n      \"long\": -99.1710412\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateLocation",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateLocation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN02",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"08/03/2022 12:00:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateValidityTime",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateValidityTime"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN03",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/02/2000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN04",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"activity\": \"activity\",\r\n    \"subactivity\": \"subactivity\",\r\n    \"typePlace\": \"typePlace\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/Decision36",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "Decision36"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN05",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nationality\": \"MXN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateNationality",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateNationality"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN06",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nationality\": \"MXN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScore",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScore"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN07",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nationality\": \"MXN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateCurrentReceipt",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateCurrentReceipt"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN08",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"country\": \"MXN\",\r\n        \"cp\": \"90490\",\r\n        \"state\": \"Tlaxcala\",\r\n        \"city\": \"Tzompantepec\",\r\n        \"mpo\": \"Jean Charlot\",\r\n        \"colonia\": \"Barrio de san jose\",\r\n        \"exteriorNo\": \"11\",\r\n        \"street\": \"Calle H\",\r\n        \"log\":{\r\n            \"XX-Application-Name\": \"XXX-NNN\"\r\n        }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateFullAdress",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateFullAdress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN09",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"SOLTERO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateMaritalStatus",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateMaritalStatus"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN10",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"country\": \"MXN\",\r\n    \"cp\": \"12345\",\r\n    \"state\": \"Tlaxcala\",\r\n    \"city\": \"Tzompantepec\",\r\n    \"mpo\": \"Jean Charlot\",\r\n    \"colonia\": \"Colonia A\",\r\n    \"exteriorNo\": \"11\",\r\n    \"street\": \"Calle 1\",\r\n  \"log\": {\r\n    \"uuid\": \"AXSD-12323-ASDA\",\r\n    \"deviceId\": \"AS456SAS\",\r\n    \"channel_id\": \"STREAM\",\r\n    \"XX-Application-Name\": \"type/aplication\",\r\n    \"geolocation-Latitude\": \"-15.0000\",\r\n    \"geolocation-Longitude\": \"15012.0000\"\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateCPAddress",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateCPAddress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN11",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"score\": 60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScoreLifeTest",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScoreLifeTest"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN12",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"score\": 60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScoreMeeting",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScoreMeeting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN13",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"05/06/2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestDate",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN14",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"CASADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateMarriedHomonymy",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateMarriedHomonymy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN15",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"17/06/2024 12:20:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateEmailTime",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateEmailTime"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN16",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRejectedRequest",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRejectedRequest"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN17",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"CASADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateNotMarriedHomonymy",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateNotMarriedHomonymy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN18",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"group\": 2,\r\n    \"response\": \"Mujer\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ConsultParametricRule",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ConsultParametricRule"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN19",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"22/07/2024 10:43:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedDate",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN20",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"22/07/2024 10:43:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedDate",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN21",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "wmadmin123!",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phase\":\"PLD\",\r\n    \"log\": {\r\n        \"uuid\": \"uuid\",\r\n        \"deviceId\": \"deviceId\",\r\n        \"channel_id\": \"channel_id\",\r\n        \"XX-Application-Name\": \"XX-Application-Name\",\r\n        \"geolocation-Latitude\": \"geolocation-Latitude\",\r\n        \"geolocation-Longitude\": \"geolocation-Longitude\",\r\n        \"rule-name\": \"ValidateRequestQualifiedPhase\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://52.255.171.83:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedPhase",
+              "protocol": "http",
+              "host": [
+                "52",
+                "255",
+                "171",
+                "83"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedPhase"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API TEST",
+      "item": [
+        {
+          "name": "Request",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "deboestudiar",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "anoche",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://35.172.100.94:5555/rest/pub/opentask?taskID=8412&taskData={description:holaaa}&taskInfo={description:holaaa}",
+              "protocol": "http",
+              "host": [
+                "35",
+                "172",
+                "100",
+                "94"
+              ],
+              "port": "5555",
+              "path": [
+                "rest",
+                "pub",
+                "opentask"
+              ],
+              "query": [
+                {
+                  "key": "taskID",
+                  "value": "8412"
+                },
+                {
+                  "key": "status",
+                  "value": "scheduled",
+                  "disabled": true
+                },
+                {
+                  "key": "priority",
+                  "value": "medium",
+                  "disabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "hola soy el soup ui",
+                  "disabled": true
+                },
+                {
+                  "key": "taskData",
+                  "value": "{description:holaaa}"
+                },
+                {
+                  "key": "taskInfo",
+                  "value": "{description:holaaa}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Rules",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true,
+            "disabledSystemHeaders": {
+              "accept": true
+            }
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "manage",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "operationId",
+                "value": "determinarTipoDocumental_GET_1",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"NR01_DeterminarTipoDocumental\":{\r\n            \"doc_DeterminarTipoDocumental\": {\r\n                \"documentos\": [],\r\n                \"producto\": \"cliente\"\r\n            }\r\n    },\r\n     \"producto\": \"cliente\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://3.236.225.236:5555/rad/AP_REG_Comunes.api:API_TDC_Onboarding/determinarTipoDocumental",
+              "protocol": "http",
+              "host": [
+                "3",
+                "236",
+                "225",
+                "236"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "AP_REG_Comunes.api:API_TDC_Onboarding",
+                "determinarTipoDocumental"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET TASK INFO",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "manage",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "http://3.236.225.236:5555/rest/pub/opentask?taskID=8412",
+              "protocol": "http",
+              "host": [
+                "3",
+                "236",
+                "225",
+                "236"
+              ],
+              "port": "5555",
+              "path": [
+                "rest",
+                "pub",
+                "opentask"
+              ],
+              "query": [
+                {
+                  "key": "taskID",
+                  "value": "8412"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST RULES - DEV",
+      "item": [
+        {
+          "name": "RN01_ValidateLocation",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"lat\": 26.073498,\r\n      \"long\": -98.36298\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateLocation",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateLocation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN02_ValidateValidityTime",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"date\": \"19/08/2025 12:50:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateValidityTime",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateValidityTime"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN03_ValidateAge",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/02/2000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN04_Decision36",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"activity\" : \"4\",\r\n    \"subactivity\" : \"1\",\r\n    \"typePlace\" : \"H\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/Decision36",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "Decision36"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN05_ValidateNationality",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nationality\": \"MX\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateNationality",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateNationality"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN06_ValidateScore",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"scoreINE\": 82.1,\r\n    \"scoreSelfie\": 80.1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScore",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScore"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN07_ValidateCurrentReceipt",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"07/09/2025\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateCurrentReceipt",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateCurrentReceipt"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN08_ValidateFullAdress Copy",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "TEwNtDOwsLoG",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "e_anoche",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"country\": \"MXN\",\r\n    \"cp\": \"90490\",\r\n    \"state\": \"Tlaxcala\",\r\n    \"city\": \"Tzompantepec\",\r\n    \"mpo\": \"Jean Charlot\",\r\n    \"colony\": \"Barrio de san jose\",\r\n    \"street\": \"Calle H\",\r\n    \"log\": {\r\n        \"XX-Application-Name\": \"XXX-NNN\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateFullAdress",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateFullAdress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN14_ValidateMarriedHomonymy",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"CASADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateMarriedHomonymy",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateMarriedHomonymy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN15_ValidateEmailTime",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/02/2000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN19_ValidateRequestPhase",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"22/07/2024 10:43:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedDate",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN18_ConsultParametricRule",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "siSToNymAN",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "customerOnboarding",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"request\": [\r\n        {\r\n            \"category\":\"gender\",\r\n            \"response\": \"F\"\r\n        }\r\n    ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ConsultParametricRule",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ConsultParametricRule"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN20_ValidateRequestPhase Copy",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phase\": \"Preparación\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestPhase",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestPhase"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN21_ValidateRequestQualifiedPhase",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phase\":\"PLD\",\r\n    \"log\": {\r\n        \"uuid\": \"AXSD-12323-ASDA\",\r\n        \"deviceId\": \"AS456SAS\",\r\n        \"channel_id\": \"STREAM\",\r\n        \"XX-Application-Name\": \"type/aplication\",\r\n        \"geolocation-Latitude\": \"-15.0000\",\r\n        \"geolocation-Longitude\": \"150.0000\",\r\n        \"rule-name\": \"ValidateRequestQualifiedPhase\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedPhase",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedPhase"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST RULES - QA",
+      "item": [
+        {
+          "name": "RN01_ValidateLocation",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "aLBqNCrP",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"lat\": 19.4004158,\r\n      \"long\": -99.1710412\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateLocation",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateLocation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN02_ValidateValidityTime",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"date\": \"19/08/2025 12:54:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateValidityTime",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateValidityTime"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN03_ValidateAge",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/02/2000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN03_ValidateAge_GET",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/02/2000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN04_Desicion36",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"activity\": \"4\",\r\n    \"subactivity\": \"1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/Decision36",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "Decision36"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN05_ValidateNationality",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nationality\": \"MEX\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateNationality",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateNationality"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN06_ValidateScore",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"scoreINE\": 70.0,\r\n    \"scoreSelfie\": 79.9\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScore",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScore"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN07_ValidateCurrentReceipt",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"07/05/2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateCurrentReceipt",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateCurrentReceipt"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN08_ValidateFullAdress",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "TEwNtDOwsLoG",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "e_anoche",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"country\": \"MXN\",\r\n    \"cp\": \"90490\",\r\n    \"state\": \"Tlaxcala\",\r\n    \"city\": \"Tzompantepec\",\r\n    \"mpo\": \"Jean Charlot\",\r\n    \"colony\": \"Barrio de san jose\",\r\n    \"street\": \"Calle H\",\r\n    \"log\": {\r\n        \"XX-Application-Name\": \"XXX-NNN\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.23.55:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateFullAdress",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "23",
+                "55"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateFullAdress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN09_ValidateMaritalStatus",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"SOLTERO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateMaritalStatus",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateMaritalStatus"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN10_ValidateCPAddress",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"country\": \"MXN\",\r\n    \"cp\": \"12345\",\r\n    \"state\": \"Tlaxcala\",\r\n    \"city\": \"Tzompantepec\",\r\n    \"mpo\": \"Jean Charlot\",\r\n    \"colonia\": \"Colonia A\",\r\n    \"exteriorNo\": \"11\",\r\n    \"street\": \"Calle 1\",\r\n  \"log\": {\r\n    \"uuid\": \"AXSD-12323-ASDA\",\r\n    \"deviceId\": \"AS456SAS\",\r\n    \"channel_id\": \"STREAM\",\r\n    \"XX-Application-Name\": \"type/aplication\",\r\n    \"geolocation-Latitude\": \"-15.0000\",\r\n    \"geolocation-Longitude\": \"15012.0000\"\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateCPAddress",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateCPAddress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN11_ValidateScoreLifeTest",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"score\": 60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScoreLifeTest",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScoreLifeTest"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN12_ValidateScoreMeeting",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"score\": 60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateScoreMeeting",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateScoreMeeting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN13_ValidateRequestDate",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"05/06/2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestDate",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN14_ValidateMarriedHomonymy",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"CASADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateMarriedHomonymy",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateMarriedHomonymy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN15_ValidateEmailTime",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"17/06/2024 12:20:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateEmailTime",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateEmailTime"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN16_ValidateRejectedRequest",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"17/06/2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRejectedRequest",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRejectedRequest"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN17_ValidateNotMarriedHomonymy",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"maritalStatus\": \"SOLTERO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateNotMarriedHomonymy",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateNotMarriedHomonymy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN18_ConsultParametricRule",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"request\": [\r\n        {\r\n            \"category\":\"gender\",\r\n            \"response\": \"F\"\r\n        },\r\n        {\r\n            \"category\":\"maritalStatus\",\r\n            \"response\":\"C\"\r\n        }\r\n    ],\r\n    \"log\": {\r\n        \"XX-Application-Name\":  \"ANONIMO\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ConsultParametricRule",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ConsultParametricRule"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN19_ValidateRequestPhaseDate",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"22/07/2024 10:43:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedDate",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN20_ValidateRequestPhase",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phase\": \"Preparación\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestPhase",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestPhase"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN21_ValidateRequestQualifiedPhase",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phase\":\"PLD\",\r\n    \"log\": {\r\n        \"uuid\": \"AXSD-12323-ASDA\",\r\n        \"deviceId\": \"AS456SAS\",\r\n        \"channel_id\": \"STREAM\",\r\n        \"XX-Application-Name\": \"type/aplication\",\r\n        \"geolocation-Latitude\": \"-15.0000\",\r\n        \"geolocation-Longitude\": \"150.0000\",\r\n        \"rule-name\": \"ValidateRequestQualifiedPhase\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestQualifiedPhase",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestQualifiedPhase"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN22_ComparateCurp",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"curpINE\": \"Alberto\",\r\n    \"curpRENAPO\": \"Albertos\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ComparateCurp",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ComparateCurp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN23_ValidateActiveRequest",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \" \"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateActiveRequest",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateActiveRequest"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN24_ResponseGranData",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"200\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ResponseGranData",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ResponseGranData"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN25_GetReasonRejection",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 7\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/GetReasonRejection",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "GetReasonRejection"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN26_ValidateTelcosDate",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "nVOlMENtex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "s_wMuser",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"24/02/2026\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.209.29.180:5555/rad/Rules_Bancoppel.api.v1:rules/ValidateTelcosDate",
+              "protocol": "http",
+              "host": [
+                "10",
+                "209",
+                "29",
+                "180"
+              ],
+              "port": "5555",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateTelcosDate"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST RULES - PROD VIRG",
+      "item": [
+        {
+          "name": "RN03_ValidateAge",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "AbIeLifi",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/02/2000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.208.20.246:5565/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "10",
+                "208",
+                "20",
+                "246"
+              ],
+              "port": "5565",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN07_ValidateCurrentReceipt",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "AbIeLifi",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"07/05/2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.208.20.246:5565/rad/Rules_Bancoppel.api.v1:rules/ValidateCurrentReceipt",
+              "protocol": "http",
+              "host": [
+                "10",
+                "208",
+                "20",
+                "246"
+              ],
+              "port": "5565",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateCurrentReceipt"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST RULES - PROD OREGON",
+      "item": [
+        {
+          "name": "RN03_ValidateAge",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "AbIeLifi",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"birthdate\": \"01/01/2025\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.210.16.246:5565/rad/Rules_Bancoppel.api.v1:rules/ValidateAge",
+              "protocol": "http",
+              "host": [
+                "10",
+                "210",
+                "16",
+                "246"
+              ],
+              "port": "5565",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateAge"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RN13_ValidateRequestDate",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "AbIeLifi",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"01/10/2025\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.210.16.246:5565/rad/Rules_Bancoppel.api.v1:rules/ValidateRequestDate",
+              "protocol": "http",
+              "host": [
+                "10",
+                "210",
+                "16",
+                "246"
+              ],
+              "port": "5565",
+              "path": [
+                "rad",
+                "Rules_Bancoppel.api.v1:rules",
+                "ValidateRequestDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
